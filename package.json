@@ -1,0 +1,33 @@
+{
+  "name": "babaofood",
+  "version": "1.0.0",
+  "description": "for site babaofood.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leocornus/leocornus-platform/babaofood"
+  },
+  "keywords": [
+    "nuxt",
+    "spa",
+    "vue"
+  ],
+  "author": "Sean Chen <sean.chen@leocorn.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "lodash": "^4.17.20",
+    "nanoid": "^2.1.11",
+    "nuxt": "^2.14.7",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0"
+  }
+}
