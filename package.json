@@ -1,7 +1,7 @@
 {
-  "name": "babaofood",
+  "name": "myworkshop",
   "version": "1.0.0",
-  "description": "for site babaofood.com",
+  "description": "for site myworkshop.ca",
   "main": "index.js",
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leocornus/leocornus-platform/babaofood"
+    "url": "https://github.com/leocornus/leocornus-platform/myworkshop"
   },
   "keywords": [
     "nuxt",
@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/vuetify": "^1.11.2",
     "lodash": "^4.17.20",
     "nanoid": "^2.1.11",
