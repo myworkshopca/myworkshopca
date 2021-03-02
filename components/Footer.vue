@@ -12,6 +12,10 @@ v-footer(
         cols="12"
       )
         | Copyright &copy; 2021 MyWorkshop.ca
+        a(
+          href="https://twitter.com/myworkshopca"
+        ).pl-2
+           v-icon mdi-twitter
         br
         span.text-caption.font-weight-thin Version: {{ version }}
 </template>

@@ -14,7 +14,10 @@ section(id="hero")
       v-responsive(
         class="d-flex align-center"
       )
-        store-base-heading(title="MyWorkshop - Learn coding by building games!")
+
+        store-base-subheading(title="MyWorkshop.ca")
+
+        store-base-heading(title="Learn coding by building games!")
 
         div(class="font-weight-bold mb-4")
           | Teaching kids coding by building classical games: Snake Game, Minesweeper,
