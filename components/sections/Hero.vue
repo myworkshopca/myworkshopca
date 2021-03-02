@@ -24,13 +24,17 @@ section(id="hero")
           | Tetris, Sudoku, etc!
           br
           | Everything is on a ZERO CONFIGURATION Cloud environment!
+          br
+          | Contact 
+          span.warning--text SEAN.CHEN(at)MYWORKSHOP.CA 
+          | for details.
 
         div(
           :class="$vuetify.breakpoint.smAndDown ? 'flex-column align-start' : 'align-center'"
           class="d-flex flex-wrap"
         )
           store-base-btn(
-          ) Coming soon ...
+          ) More are coming ...
 
 </template>
 
