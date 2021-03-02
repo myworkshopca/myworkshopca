@@ -8,15 +8,28 @@ section(id="hero")
     :min-height="minHeight"
     :src="require('@/assets/store-home-hero.jpg')"
     class="white--text"
+    gradient="to right, rgba(5, 11, 31, .8), rgba(5, 11, 31, .8)"
   )
     v-container(class="fill-height px-4 py-6")
       v-responsive(
         class="d-flex align-center"
       )
-        store-base-heading(title="BaBao Food")
+        store-base-heading(title="MyWorkshop - Learn coding by building games!")
 
         div(class="font-weight-bold mb-4")
-          | Coming soon ...
+          | Teaching kids coding by building classical games: Snake Game, Minesweeper,
+          | Tetris, Sudoku, etc!
+          br
+          | Everything is on a ZERO CONFIGURATION Cloud environment!
+
+        div(
+          :class="$vuetify.breakpoint.smAndDown ? 'flex-column align-start' : 'align-center'"
+          class="d-flex flex-wrap"
+        )
+          store-base-btn(
+            to="lessons"
+          ) Check our lessons 
+
 </template>
 
 <script>

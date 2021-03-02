@@ -11,7 +11,7 @@ v-footer(
         class="text-center"
         cols="12"
       )
-        | Copyright &copy; 2021 BaBao Food
+        | Copyright &copy; 2021 MyWorkshop.ca
         br
         span.text-caption.font-weight-thin Version: {{ version }}
 </template>

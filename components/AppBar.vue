@@ -73,16 +73,6 @@ div
                 v-list-item-content
                   v-list-item-title {{$auth.user.name}}
                   v-list-item-subtitle {{$auth.user.email}}
-              v-list-item( to="/admin/members" )
-                v-list-item-icon
-                  v-icon mdi-account-multiple
-                v-list-item-content
-                  v-list-item-title Members Management
-              v-list-item( to="/admin/menu" )
-                v-list-item-icon
-                  v-icon mdi-silverware
-                v-list-item-content
-                  v-list-item-title Menu Management
               v-list-item( @click="logout" )
                 v-list-item-icon
                   v-icon mdi-logout
@@ -118,7 +108,7 @@ export default {
 
       items: [
         { name: 'Home', router: '/' },
-        { name: 'Menu', router: '/menu' },
+        { name: 'Lessons', router: '/menu' },
         //{ name: 'How to', router: '/setup' },
         //{ name: 'Pricing', router: '/pricing' },
         //'About',
