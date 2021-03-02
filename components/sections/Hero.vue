@@ -27,8 +27,7 @@ section(id="hero")
           class="d-flex flex-wrap"
         )
           store-base-btn(
-            to="lessons"
-          ) Check our lessons 
+          ) Coming soon ...
 
 </template>
 

@@ -41,7 +41,7 @@ div
           text
         ) {{ item.name }}
         // the Sing in
-        v-tab(
+        //v-tab(
           v-if="!$auth.loggedIn" 
           :ripple="false"
           active-class="text--primary"
@@ -49,11 +49,11 @@ div
           min-width="96"
           text
           @click="login"
-        ) Sign In
-        v-menu(
+        //) Sign In
+        //v-menu(
           v-if="$auth.loggedIn"
           left bottom offset-y transition="scale-transition"
-        )
+        //)
           template( v-slot:activator="{ on }" )
             v-tab(
               v-if="$auth.loggedIn" 
@@ -108,7 +108,7 @@ export default {
 
       items: [
         { name: 'Home', router: '/' },
-        { name: 'Lessons', router: '/menu' },
+        //{ name: 'Lessons', router: '/menu' },
         //{ name: 'How to', router: '/setup' },
         //{ name: 'Pricing', router: '/pricing' },
         //'About',
