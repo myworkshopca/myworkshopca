@@ -27,8 +27,8 @@ section(id="hero")
           br
           | Contact 
           // the example to darken the text color.
-          span.warning--text.text--darken-2 Sean.Chen(at)MyWorkshop.ca
-          //span.warning--text.text--lighten-2 SEAN.CHEN(at)MYWORKSHOP.CA 
+          span.warning--text.text--darken-2 Sean.Chen(at)MyWorkshop.ca 
+          //span.warning--text.text--lighten-2 Sean.Chen(at)MyWorkshop.ca 
           | for details.
 
         div(
