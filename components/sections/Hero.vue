@@ -26,7 +26,9 @@ section(id="hero")
           | Everything is on a ZERO CONFIGURATION Cloud environment!
           br
           | Contact 
-          span.warning--text SEAN.CHEN(at)MYWORKSHOP.CA 
+          // the example to darken the text color.
+          span.warning--text.text--darken-2 Sean.Chen(at)MyWorkshop.ca
+          //span.warning--text.text--lighten-2 SEAN.CHEN(at)MYWORKSHOP.CA 
           | for details.
 
         div(
