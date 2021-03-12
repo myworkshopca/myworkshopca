@@ -17,7 +17,7 @@
 
     mixins: [
       LoadSections([
-        'setup',
+        'resources',
       ]),
     ],
 
