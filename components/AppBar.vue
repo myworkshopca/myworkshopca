@@ -108,6 +108,7 @@ export default {
 
       items: [
         { name: 'Home', router: '/' },
+        { name: 'Resources', router: '/resources' },
         //{ name: 'Lessons', router: '/menu' },
         //{ name: 'How to', router: '/setup' },
         //{ name: 'Pricing', router: '/pricing' },
