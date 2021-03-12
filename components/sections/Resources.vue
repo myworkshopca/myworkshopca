@@ -52,16 +52,15 @@
           html: 'Demonstrate how to handle coordinates, keyboard, and screen painting using Python curses module.'
         },
         {
-          img: 'py-curses-coordinate.gif',
+          img: 'py-curses-color-palette.png',
           icon: 'mdi-image',
           date: 'Jan 12, 2020',
           category: 'Design',
           comments: 5,
-          title: 'curses color palette',
-          router: '/setup/iplaytv',
-          text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, nulla voluptas sed[...]',
+          title: 'python curses color palette',
+          router: '/resources/cursescolorpalette',
           // HTML tag will be allowed in html value.
-          html: 'It is very easy to use iPlayTV app on Apple TV [...]',
+          html: 'Demostrate the color palette for Python curses',
         },
       ],
     }),
