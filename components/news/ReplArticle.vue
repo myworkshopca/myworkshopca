@@ -1,33 +1,5 @@
 <template lang="pug">
   div
-    router-link(
-      :to="router"
-      class="d-block"
-    )
-      store-base-img(
-        :height="prominent ? 400 : 250"
-        :src="src"
-        flat
-        tile
-      )
-        v-row(
-          class="ma-0 fill-height"
-          align="end"
-          justify="end"
-        ) 
-          v-sheet(
-            class="pa-2 d-inline-flex align-center justify-center"
-            color="primary"
-            dark
-            tile
-            height="40"
-            width="40"
-          )
-            v-icon(
-              v-if="icon"
-              v-text="icon"
-            )
-
     div( class="pa-4" )
       store-base-title(
         :title="title"
@@ -35,17 +7,15 @@
       )
 
       store-base-body(
-        :text="!html ? truncatedText : undefined"
-        :html="html"
         space="0"
         align="left"
       )
+        slot
 
     v-btn(
       v-if="readMore"
       class="font-weight-bold"
       text
-      :to="router"
     ) Read More
 
     v-divider(

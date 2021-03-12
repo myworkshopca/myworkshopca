@@ -47,7 +47,7 @@
           category: 'Design',
           comments: 5,
           title: 'curses coordinate system',
-          router: '/resources/coordinate',
+          router: '/resources/cursescoordinate',
           // HTML tag will be allowed in html value.
           html: 'Demonstrate how to handle coordinates, keyboard, and screen painting using Python curses module.'
         },
@@ -57,7 +57,7 @@
           date: 'Jan 12, 2020',
           category: 'Design',
           comments: 5,
-          title: 'iPlayTV on Apple TV',
+          title: 'curses color palette',
           router: '/setup/iplaytv',
           text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, nulla voluptas sed[...]',
           // HTML tag will be allowed in html value.
