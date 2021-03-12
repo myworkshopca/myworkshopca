@@ -19,7 +19,8 @@
         )
           news-card(
             v-bind="news"
-            :src="require(`@/assets/${news.img}`)"
+            :src="require(`@/assets/myworkshopca/${news.img}`)"
+            readMore
           )
 </template>
 
@@ -40,19 +41,18 @@
     data: () => ({
       articles: [
         {
-          img: 'vlc-open.png',
+          img: 'py-curses-coordinate.gif',
           icon: 'mdi-image',
           date: 'Jan 12, 2020',
           category: 'Design',
           comments: 5,
-          title: 'VLC media player on Computer',
+          title: 'curses coordinate system',
           router: '/resources/coordinate',
-          text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, nulla voluptas sed[...]',
           // HTML tag will be allowed in html value.
-          html: 'It is super easy to watch live sports on your computer using VLC media player [...]',
+          html: 'Demonstrate how to handle coordinates, keyboard, and screen painting using Python curses module.'
         },
         {
-          img: 'iplaytv-appletv.png',
+          img: 'py-curses-coordinate.gif',
           icon: 'mdi-image',
           date: 'Jan 12, 2020',
           category: 'Design',
