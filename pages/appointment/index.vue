@@ -8,10 +8,10 @@
   export default {
 
     layout: 'store',
-    name: 'Resources',
+    name: 'Appointment',
     auth: false,
 
-    metaInfo: { title: 'Material and Resources for MyWorkshop' },
+    metaInfo: { title: 'Make an appointment' },
 
     extends: StoreBaseView,
 

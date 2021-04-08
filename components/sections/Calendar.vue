@@ -5,15 +5,14 @@
     store-base-section-heading(
       title="Appointment"
     ) 
-      | A list of resources and tools for students to 
-      | experience and understand key concepts and aspects of
-      | computer programming.
+      | Make an appointment for lessons and debug sessions.
 
-    v-sheet(
-      height="600"
-    )
-      v-calendar(
+    v-container
+      v-sheet(
+        height="600"
       )
+        v-calendar(
+        )
 </template>
 
 <script>
