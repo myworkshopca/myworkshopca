@@ -109,7 +109,7 @@ export default {
       items: [
         { name: 'Home', router: '/' },
         { name: 'Resources', router: '/resources' },
-        { name: 'Appointment', router: '/appointment' },
+        { name: 'Schedule', router: '/schedule' },
         //{ name: 'Lessons', router: '/menu' },
         //{ name: 'How to', router: '/setup' },
         //{ name: 'Pricing', router: '/pricing' },
