@@ -8,16 +8,16 @@
   export default {
 
     layout: 'store',
-    name: 'Appointment',
+    name: 'Schedule',
     auth: false,
 
-    metaInfo: { title: 'Make an appointment' },
+    metaInfo: { title: 'MyWorkshop schedule' },
 
     extends: StoreBaseView,
 
     mixins: [
       LoadSections([
-        'calendar',
+        'schedule',
       ]),
     ],
 

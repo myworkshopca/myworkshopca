@@ -1,11 +1,11 @@
 <template lang="pug">
   store-base-section(
-    id="calendar"
+    id="schedule"
   )
     store-base-section-heading(
-      title="Appointment"
+      title="MyWorkshop Schedule"
     ) 
-      | Make an appointment for lessons and debug sessions.
+      | Current schedule for lessons and debug sessions.
 
     v-container
       v-sheet(
@@ -24,24 +24,25 @@
           ) Today
           v-btn(
             icon
-            @click="$refs.thecalendar.prev()"
+            @click="$refs.calendar.prev()"
           )
             v-icon mdi-chevron-left
+
+          v-toolbar-title(
+            v-if="$refs.calendar"
+          ) {{ $refs.calendar.title }}
+
           v-btn(
             icon
-            @click="$refs.thecalendar.next()"
+            @click="$refs.calendar.next()"
           )
             v-icon mdi-chevron-right
 
-          v-toolbar-title(
-            v-if="$refs.thecalendar"
-          ) {{ $refs.thecalendar.title }}
       v-sheet(
         height="600"
       )
         v-calendar(
-          id="thecalendar"
-          ref="thecalendar"
+          ref="calendar"
           v-model="value"
           type="week"
           color="primary"
@@ -51,7 +52,7 @@
 <script>
 export default {
 
-    name: "SectionCalendar",
+    name: "SectionSchedule",
 
     data: function() {
         return {
@@ -61,7 +62,7 @@ export default {
 
     mounted() {
 
-        this.$refs.thecalendar.checkChange();
+        this.$refs.calendar.checkChange();
     },
 
     methods: {
