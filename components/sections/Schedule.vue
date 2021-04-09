@@ -18,8 +18,7 @@
         )
           // go to today.
           v-btn(
-            outlined
-            color="grey darken-2"
+            color="success darken-2"
             @click="setToday"
           ) Today
           v-btn(
@@ -106,7 +105,7 @@ export default {
 
                 // event name.
                 let name = "Help & Debug Session";
-                let color = "primary";
+                let color = "deep-purple";
                 if([5, 6].includes(theDay.getDay())) {
                     name = "Lesson: Snake Game";
                     color = "warning";
