@@ -11,7 +11,9 @@
     name: 'Resources',
     auth: false,
 
-    metaInfo: { title: 'Material and Resources for MyWorkshop' },
+    head: {
+        title: 'Resources'
+    },
 
     extends: StoreBaseView,
 

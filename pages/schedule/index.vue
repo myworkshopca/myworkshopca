@@ -12,7 +12,7 @@ export default {
     auth: false,
 
     head: {
-        title: 'MyWorkshop schedule'
+        title: 'Schedule'
     },
 
     extends: StoreBaseView,
