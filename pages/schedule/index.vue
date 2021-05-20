@@ -1,17 +1,19 @@
 <script>
-  // Extensions
-  import StoreBaseView from '@/components/views/BaseView'
+// Extensions
+import StoreBaseView from '@/components/views/BaseView'
 
-  // Mixins
-  import LoadSections from '@/libs/load-sections'
+// Mixins
+import LoadSections from '@/libs/load-sections'
 
-  export default {
+export default {
 
     layout: 'store',
     name: 'Schedule',
     auth: false,
 
-    metaInfo: { title: 'MyWorkshop schedule' },
+    head: {
+        title: 'MyWorkshop schedule'
+    },
 
     extends: StoreBaseView,
 
@@ -27,5 +29,5 @@
         default: 'setup',
       },
     },
-  }
+}
 </script>

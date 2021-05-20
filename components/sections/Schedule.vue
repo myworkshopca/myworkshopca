@@ -101,17 +101,21 @@ export default {
             //console.log("The Day: ", theDay);
             // we have lesson on Friday.
             let ymd = theDay.toISOString().split("T")[0];
+            // iterate through all week days: 
+            // 0 is Sunday, 1 is Monday and 6 is Saturday
             for( let i = 0; i < 7; i ++) {
 
-                // event name.
+                // default event name and color.
                 let name = "Help & Debug Session";
                 let color = "deep-purple";
+
+                // set Friday and and Saturday for lesson.
                 if([5, 6].includes(theDay.getDay())) {
                     name = "Lesson: Snake Game";
                     color = "warning";
                 }
 
-                // event start time.
+                // the default start time and end time for an event.
                 let st = "16:00:00";
                 let et = "17:00:00";
                 switch( theDay.getDay() ) {
