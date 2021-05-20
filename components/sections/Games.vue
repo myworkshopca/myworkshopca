@@ -15,7 +15,7 @@
           cols="12"
           md="4"
         )
-          news-card(
+          game-card(
             v-bind="game"
             :src="require(`@/pages/games/${game.img}`)"
             readMore
@@ -28,7 +28,7 @@ export default {
     name: 'SectionGames',
 
     components: {
-        NewsCard: () => import('@/components/news/Card'),
+        GameCard: () => import('@/components/game/GameCard'),
     },
 
     data: function() {

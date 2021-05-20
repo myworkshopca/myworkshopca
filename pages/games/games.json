@@ -6,9 +6,9 @@
       "category": "Design",
       "comments": 5,
       "title": "Curses Snake Game",
-      "router": "/resources/cursescoordinate",
+      "router": "/games/game?name=curses-snake",
       "html": "Build the Snake game by using Python3 curses module.",
-      "details": ""
+      "details": "curses-snake/index.json"
     },
     {
       "img": "curses-minesweeper/index.png",
