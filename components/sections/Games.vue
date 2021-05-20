@@ -17,7 +17,7 @@
         )
           news-card(
             v-bind="game"
-            :src="require(`@/assets/myworkshopca/${game.img}`)"
+            :src="require(`@/pages/games/imgs/${game.img}`)"
             readMore
           )
 </template>
