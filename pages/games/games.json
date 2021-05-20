@@ -4,20 +4,17 @@
       "icon": "mdi-image",
       "date": "Jan 12, 2020",
       "category": "Design",
-      "comments": 5,
       "title": "Curses Snake Game",
       "router": "/games/detail?name=curses-snake",
-      "html": "Build the Snake game by using Python3 curses module.",
-      "details": "curses-snake/index.json"
+      "html": "Build the Snake game by using Python3 curses module."
     },
     {
       "img": "curses-minesweeper/index.png",
       "icon": "mdi-image",
       "date": "Jan 12, 2020",
       "category": "Design",
-      "comments": 5,
       "title": "Curses Minesweeper",
-      "router": "/resources/cursescolorpalette",
+      "router": "/games/detail?name=curses-minesweeper",
       "html": "Build the Minesweeper by using Python3 curses module."
     }
 ]
