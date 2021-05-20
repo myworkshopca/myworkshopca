@@ -17,7 +17,7 @@
         )
           news-card(
             v-bind="game"
-            :src="require(`@/pages/games/imgs/${game.img}`)"
+            :src="require(`@/pages/games/${game.img}`)"
             readMore
           )
 </template>
