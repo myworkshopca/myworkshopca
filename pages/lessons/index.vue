@@ -8,18 +8,18 @@
   export default {
 
     layout: 'store',
-    name: 'Games',
+    name: 'Lessons',
     auth: false,
 
     head: {
-        title: 'Games'
+        title: 'Lessons'
     },
 
     extends: StoreBaseView,
 
     mixins: [
       LoadSections([
-        'games',
+        'lessons-list',
       ]),
     ],
 

@@ -23,7 +23,7 @@ v-card(
 <script>
 export default {
 
-    name: 'StoreGameCard',
+    name: 'StoreLessonCard',
 
     props: {
       category: String,

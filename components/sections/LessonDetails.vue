@@ -1,6 +1,6 @@
 <template lang="pug">
 store-base-section(
-  id="gamedetail"
+  id="lessondetails"
 )
   store-base-section-heading(
     :title="title"
@@ -10,7 +10,7 @@ store-base-section(
 <script>
 export default {
 
-    name: "SectionGameDetail",
+    name: "SectionLessonDetails",
 
     data: function() {
 
@@ -22,7 +22,7 @@ export default {
 
     created: function() {
 
-        this.details = require(`@/pages/games/${this.$route.query.name}/index.json`);
+        this.details = require(`@/pages/lessons/${this.$route.query.name}/index.json`);
     },
 
     computed: {

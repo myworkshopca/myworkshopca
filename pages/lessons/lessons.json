@@ -5,7 +5,7 @@
       "date": "Jan 12, 2020",
       "category": "Design",
       "title": "Curses Snake Game",
-      "router": "/games/detail?name=curses-snake",
+      "router": "/lessons/details?name=curses-snake",
       "html": "Build the Snake game by using Python3 curses module."
     },
     {
@@ -14,7 +14,7 @@
       "date": "Jan 12, 2020",
       "category": "Design",
       "title": "Curses Minesweeper",
-      "router": "/games/detail?name=curses-minesweeper",
+      "router": "/lessons/details?name=curses-minesweeper",
       "html": "Build the Minesweeper by using Python3 curses module."
     }
 ]

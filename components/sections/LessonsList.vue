@@ -1,23 +1,23 @@
 <template lang="pug">
 store-base-section(
-  id="games"
+  id="lessons-list"
 )
   store-base-section-heading(
-    title="Games"
+    title="Lessons"
   ) 
-    | A list of games that we are building now.
+    | A list of lessons that we are offeringg now.
 
   v-container
     v-row
       v-col(
-        v-for="(game, i) in games"
+        v-for="(lesson, i) in lessons"
         :key="i"
         cols="12"
         md="4"
       )
-        game-card(
-          v-bind="game"
-          :src="require(`@/pages/games/${game.img}`)"
+        lesson-card(
+          v-bind="lesson"
+          :src="require(`@/pages/lessons/${lesson.img}`)"
           readMore
         )
 </template>
@@ -25,21 +25,21 @@ store-base-section(
 <script>
 export default {
 
-    name: 'SectionGames',
+    name: 'SectionLessonsList',
 
     components: {
-        GameCard: () => import('@/components/game/GameCard'),
+        LessonCard: () => import('@/components/lesson/LessonCard'),
     },
 
     data: function() {
         return {
-            games: []
+            lessons: []
         };
     },
 
     mounted: function() {
 
-        this.games = require(`@/pages/games/games.json`);
+        this.lessons = require(`@/pages/lessons/lessons.json`);
     }
 }
 </script>
