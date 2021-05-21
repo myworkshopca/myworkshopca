@@ -116,28 +116,36 @@ export default {
                 }
 
                 // the default start time and end time for an event.
-                let st = "16:00:00";
-                let et = "17:00:00";
+                let st = "18:00:00";
+                let et = "20:00:00";
                 switch( theDay.getDay() ) {
                     case 0:
-                        st = "10:00:00";
-                        et = "11:00:00";
+                        //st = "10:00:00";
+                        //et = "11:00:00";
+                        st = null;
+                        et = null;
                         break;
                     case 1:
-                        st = "18:00:00";
-                        et = "19:00:00";
+                        //st = "18:00:00";
+                        //et = "19:00:00";
+                        st = null;
+                        et = null;
                         break;
                     case 4:
-                        st = "19:00:00";
+                        st = "18:00:00";
                         et = "20:00:00";
                         break;
                     case 5:
-                        st = "19:00:00";
-                        et = "20:30:00";
+                        //st = "19:00:00";
+                        st = null;
+                        //et = "20:30:00";
+                        et = null;
                         break;
                     case 6:
-                        st = "18:30:00";
-                        et = "20:00:00";
+                        //st = "18:30:00";
+                        st = null;
+                        //et = "20:00:00";
+                        et = null;
                         break;
                     default:
                         break;
