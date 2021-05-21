@@ -16,5 +16,12 @@
       "title": "Curses Minesweeper",
       "router": "/lessons/details?name=curses-minesweeper",
       "html": "Build the Minesweeper by using Python3 curses module."
+    },
+    {
+      "img": "curses-tetris/index.gif",
+      "category": "Design",
+      "title": "Curses Tetris",
+      "router": "/lessons/details?name=curses-tetris",
+      "html": "Build the classical Tetris Game by using Python3 curses module."
     }
 ]
