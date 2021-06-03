@@ -5,6 +5,37 @@ store-base-section(
   store-base-section-heading(
     :title="title"
   ) {{ details.subtitle }}
+
+  v-navigation-drawer(
+    floating
+    fixed
+    clipped
+    style="top: 80px"
+  )
+    v-list(
+      dense
+      rounded
+    )
+      v-list-item(
+        v-for="n in 10"
+        :key="n"
+        link
+      )
+        v-list-item-content
+          v-list-item-title
+            a(
+              :to="`#item${n}`"
+              @click.native="`location.hash='#item${n}'`"
+            ) {{ `Item number ${n}` }}
+
+  div(
+    style="padding: 0px 256px 0px 300px"
+  )
+    p(
+      v-for="i in 10"
+      :key="i"
+      :id="`item${i}`"
+    ).pb-12 aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel.
 </template>
 
 <script>
