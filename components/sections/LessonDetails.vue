@@ -31,11 +31,19 @@ store-base-section(
   div(
     style="padding: 0px 256px 0px 300px"
   )
-    p(
+    // using dummy data for testing.
+
+    section(
       v-for="i in 10"
       :key="i"
       :id="`item${i}`"
-    ).pb-12 aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel.
+    ).pb-12 {{`ITEM: ${i}`}}
+      br
+      | {{ $route.path }}
+      br
+      | {{ $route.query}}
+      br
+      | aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel.
 </template>
 
 <script>
