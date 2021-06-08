@@ -6,12 +6,15 @@ store-base-section(
     :title="title"
   ) {{ details.subtitle }}
 
+  // style
+  //  - top, left, right: is for the position
+  //  - set height to auto to adjust the height automatically
   v-navigation-drawer(
     floating
     fixed
     clipped
-    style="top: 80px"
-  )
+    style="top: 80px; height: auto; max-height: calc(100% - 72px)"
+  ).pl-6
     v-list(
       dense
       rounded
@@ -23,9 +26,9 @@ store-base-section(
       )
         v-list-item-content
           v-list-item-title
+            // $route allowed to be used inside the ${}
             a(
-              :to="`#item${n}`"
-              @click.native="`location.hash='#item${n}'`"
+              :href="`${$route.path}?name=${$route.query.name}#item${n}`"
             ) {{ `Item number ${n}` }}
 
   div(
@@ -37,7 +40,8 @@ store-base-section(
       v-for="i in 10"
       :key="i"
       :id="`item${i}`"
-    ).pb-12 {{`ITEM: ${i}`}}
+    ).pb-6
+      h3 {{`ITEM: ${i}`}}
       br
       | {{ $route.path }}
       br
