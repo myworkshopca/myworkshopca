@@ -4,6 +4,7 @@ store-base-section(
 )
   store-base-section-heading(
     :title="title"
+    id="top"
   ) {{ details.subtitle }}
 
   // style
@@ -48,6 +49,12 @@ store-base-section(
               //a(
               //  :href="`${$route.path}?name=${$route.query.name}#item${n}`"
               //) {{ `Item number ${n}` }}
+        v-list-item(
+          v-if="selectedSection > -1"
+          @click="selectedSection = -1; scrollTo(-1)"
+        )
+          v-list-item-content
+            v-list-item-title Back to top
 
   div(
     style="padding: 0px 256px 0px 300px"
@@ -81,7 +88,7 @@ export default {
 
             // the model for list-item-group, it will store the index id
             // for the selected item
-            selectedSection: 0
+            selectedSection: -1 
         };
     },
 
@@ -115,8 +122,19 @@ export default {
         scrollTo: function(n) {
 
             // set the target.
-            const target = `#item${n}`;
-            this.$vuetify.goTo(target);
+            //const target = n < 0 ? "#top" : `#item${n}`;
+            //this.$vuetify.goTo(target);
+
+            let vm = this;
+
+            if( n < 0 ) {
+                vm.$vuetify.goTo("#top");
+                vm.$nextTick( () => {
+                    vm.selectedSection = -1;
+                } )
+            } else {
+                vm.$vuetify.goTo(`#item${n}`);
+            }
         }
     }
 }
