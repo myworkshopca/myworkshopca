@@ -10,6 +10,11 @@ store-base-section(
   //  - top, left, right: is for the position
   //  - set height to auto to adjust the height automatically
   //  - pl-6 set left padding to 6em!
+  // component
+  // reference the Vuetify document site source code:
+  //  - https://github.com/vuetifyjs/vuetify/tree/master/packages/docs/src
+  // the layouts/default/Toc.vue component will have details for
+  // the table of content component.
   v-navigation-drawer(
     floating
     fixed
@@ -48,7 +53,7 @@ store-base-section(
     style="padding: 0px 256px 0px 300px"
   )
     // using dummy data for testing.
-
+    p some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview 
     section(
       v-for="i in 10"
       :key="i"
@@ -103,6 +108,10 @@ export default {
 
     methods: {
 
+        /**
+         * more details on page:
+         * - https://vuetifyjs.com/en/features/scrolling/
+         */
         scrollTo: function(n) {
 
             // set the target.
