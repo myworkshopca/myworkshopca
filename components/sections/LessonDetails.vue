@@ -9,27 +9,38 @@ store-base-section(
   // style
   //  - top, left, right: is for the position
   //  - set height to auto to adjust the height automatically
+  //  - pl-6 set left padding to 6em!
   v-navigation-drawer(
     floating
     fixed
     clipped
-    style="top: 80px; height: auto; max-height: calc(100% - 72px)"
+    style="top: 90px; height: auto; max-height: calc(100% - 72px)"
   ).pl-6
+
+    template(
+      v-slot:prepend
+    )
+      h3 Contents
+
     v-list(
       dense
       rounded
     )
-      v-list-item(
-        v-for="n in 10"
-        :key="n"
-        link
+      v-list-item-group(
+        v-model="selectedSection"
+        color="primary"
       )
-        v-list-item-content
-          v-list-item-title
-            // $route allowed to be used inside the ${}
-            a(
-              :href="`${$route.path}?name=${$route.query.name}#item${n}`"
-            ) {{ `Item number ${n}` }}
+        v-list-item(
+          v-for="n in 10"
+          :key="n"
+          link
+        )
+          v-list-item-content
+            v-list-item-title
+              // $route allowed to be used inside the ${}
+              a(
+                :href="`${$route.path}?name=${$route.query.name}#item${n}`"
+              ) {{ `Item number ${n}` }}
 
   div(
     style="padding: 0px 256px 0px 300px"
@@ -59,12 +70,20 @@ export default {
 
         return {
 
-            details: null
+            details: null,
+
+            // the model for list-item-group, it will store the index id
+            // for the selected item
+            selectedSection: 0
         };
     },
 
     created: function() {
 
+        // here are the structure for the lessions:
+        // - we will have a folder for each lesson.
+        // - the index.json will have the lesson details
+        // - all media / images will store in the lesson folder.
         this.details = require(`@/pages/lessons/${this.$route.query.name}/index.json`);
     },
 
