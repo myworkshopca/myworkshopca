@@ -34,13 +34,15 @@ store-base-section(
           v-for="n in 10"
           :key="n"
           link
+          @click="scrollTo(n)"
         )
           v-list-item-content
-            v-list-item-title
+            v-list-item-title {{ `Item number ${n}` }}
+              // the $vuetify.goTo method will handle the scrolling perfectly
               // $route allowed to be used inside the ${}
-              a(
-                :href="`${$route.path}?name=${$route.query.name}#item${n}`"
-              ) {{ `Item number ${n}` }}
+              //a(
+              //  :href="`${$route.path}?name=${$route.query.name}#item${n}`"
+              //) {{ `Item number ${n}` }}
 
   div(
     style="padding: 0px 256px 0px 300px"
@@ -96,6 +98,16 @@ export default {
             //return this.$route.query.name;
 
             return this.details.title;
+        }
+    },
+
+    methods: {
+
+        scrollTo: function(n) {
+
+            // set the target.
+            const target = `#item${n}`;
+            this.$vuetify.goTo(target);
         }
     }
 }
