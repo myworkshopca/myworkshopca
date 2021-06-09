@@ -15,8 +15,15 @@ store-base-section(
   div(
     style="padding: 0px 256px 0px 300px"
   )
-    // using dummy data for testing.
-    p some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview 
+    // overview of this lesson.
+    p(
+      v-if="details.overview"
+      v-html="details.overview"
+    )
+    // this is the dummy data for testing.
+    p( v-else) some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview 
+
+    // go through the lesson details section by section.
     section(
       v-for="i in 10"
       :key="i"

@@ -1,8 +1,15 @@
 [
     {
+      "img": "curses-snake/index.gif",
+      "category": "Design",
+      "title": "Curses Snake Game",
+      "router": "/lessons/details?name=curses-snake",
+      "html": "Build the Snake Game by using Python3 curses module."
+    },
+    {
       "img": "curses-tetris/index.gif",
       "category": "Design",
-      "title": "Curses Tetris",
+      "title": "Curses Tetris Game",
       "router": "/lessons/details?name=curses-tetris",
       "html": "Build the classical Tetris Game by using Python3 curses module."
     }
