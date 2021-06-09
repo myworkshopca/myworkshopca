@@ -1,6 +1,11 @@
 <template lang="pug">
+// Component LessonCard
+   The component is used to display the cover image and
+   short description for a lesson
+
 v-card(
 )
+  // cover image
   v-img(
       height="250"
       :src="src"
