@@ -19,11 +19,12 @@
       tag="h2"
     )
 
+    // turn off the uppercase by remove this class
+       - class="text-uppercase"
     store-base-subheading(
       v-if="title"
       :align="align"
       :title="title"
-      class="text-uppercase"
       space="2"
     )
 

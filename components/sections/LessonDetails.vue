@@ -2,6 +2,9 @@
 store-base-section(
   id="lessondetails"
 )
+  // title was set to be all upper case by using the class
+     - text-uppercase
+     which is set on component base/SectionHeading.vue
   store-base-section-heading(
     :title="title"
     id="top"
