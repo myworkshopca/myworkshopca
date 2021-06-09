@@ -1,0 +1,35 @@
+{
+    "title": "Curses in Basic",
+    "subtitle": "Learning the basic concepts and knowledage of the Python Curses module",
+    "overview": "The curses library supplies a terminal-independent screen-painting and keyboard-handling facility for text-based terminals. Our text-based terminal game will built on top of curses library. This lesson will provide the basic concepts and knowlege for curses library.",
+
+    "comment-sections": "list of sections",
+    "sections": [
+        {
+            "title": "Curses coordinate system",
+            "content": ""
+        },
+        {
+            "title": "Hello Curses and basic functions",
+            "overview": ""
+        },
+        {
+            "title": "Paint message at the center"
+        },
+        {
+            "title": "ASCII code and unicode characters"
+        },
+        {
+            "title": "Challenge 1: Keyboard decoding game"
+        },
+        {
+            "title": "How to use color with curses?"
+        }
+    ],
+
+    "sections-draft": [
+        {
+            "title": "Summary"
+        }
+    ]
+}

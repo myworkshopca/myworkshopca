@@ -1,5 +1,12 @@
 [
     {
+      "img": "curses-basic/index.gif",
+      "category": "Design",
+      "title": "Curses in Basic",
+      "router": "/lessons/details?name=curses-basic",
+      "html": "Basic knowledge about Python3 curses module."
+    },
+    {
       "img": "curses-snake/index.gif",
       "category": "Design",
       "title": "Curses Snake Game",
