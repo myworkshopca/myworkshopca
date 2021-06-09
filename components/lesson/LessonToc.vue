@@ -33,13 +33,14 @@ v-navigation-drawer(
       color="primary"
     )
       v-list-item(
-        v-for="n in 10"
+        v-for="(title, n) in sectionTitles"
         :key="n"
         link
         @click="scrollTo(n)"
       )
         v-list-item-content
-          v-list-item-title {{ `Item number ${n}` }}
+          // the class text-wrap will wrap the long title to 2 lines
+          v-list-item-title.text-wrap {{ title }}
             // the $vuetify.goTo method will handle the scrolling perfectly
             // $route allowed to be used inside the ${}
             //a(
@@ -58,6 +59,15 @@ export default {
     name: 'StoreLessonToc',
 
     props: {
+        sectionTitles: {
+            type: Array,
+            default: function() {
+                // using Array from() and keys() methods.
+                //return Array.from(Array(10).keys());
+                // using the spread operator
+                return [...Array(10).keys()];
+            }
+        }
     },
 
     data: function() {

@@ -10,7 +10,9 @@ store-base-section(
     id="top"
   ) {{ details.subtitle }}
 
-  lesson-toc
+  lesson-toc(
+    :sectionTitles="sectionTitles"
+  )
 
   div(
     style="padding: 0px 256px 0px 300px"
@@ -21,21 +23,25 @@ store-base-section(
       v-html="details.overview"
     )
     // this is the dummy data for testing.
-    p( v-else) some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview 
+    p( v-else ) some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview some overview 
 
     // go through the lesson details section by section.
     section(
-      v-for="i in 10"
+      v-for="(section, i) in details.sections"
       :key="i"
       :id="`item${i}`"
     ).pb-6
-      h3 {{`ITEM: ${i}`}}
-      br
-      | {{ $route.path }}
-      br
-      | {{ $route.query}}
-      br
-      | aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel. aes eiale eislerh deislda eisrh eslei sielseka deisl deodkdy esqiakdit soel.
+      h3 {{ section.title }}
+      p(
+        v-if="section.content"
+        v-html="section.content"
+      )
+
+      // some testing code to check the $route object
+      // br
+      //| {{ $route.path }}
+      //br
+      //| {{ $route.query}}
 </template>
 
 <script>
@@ -78,6 +84,13 @@ export default {
             //return this.$route.query.name;
 
             return this.details.title;
+        },
+
+        sectionTitles: function() {
+
+            return this.details.sections.map( (section) => {
+                return section.title;
+            } );
         }
     },
 
