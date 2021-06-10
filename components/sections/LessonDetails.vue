@@ -32,10 +32,21 @@ store-base-section(
       :id="`item${i}`"
     ).pb-6
       h3 {{ section.title }}
-      p(
+      // v-html will override all content inside this element.
+      div(
         v-if="section.content"
         v-html="section.content"
       )
+      v-img(
+        v-if="section.image"
+        :src="require(`@/pages/lessons/${$route.query.name}/${section.image}`)"
+        width="300px"
+        position="left"
+      )
+      // using the slide-groups to show each image in a card.
+         v-slide-group
+           v-slide-item
+             v-card
 
       // some testing code to check the $route object
       // br

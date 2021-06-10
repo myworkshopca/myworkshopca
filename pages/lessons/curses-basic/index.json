@@ -6,8 +6,19 @@
     "comment-sections": "list of sections",
     "sections": [
         {
+            "title": "Overview",
+            "content": "In this lesson, we will learn the fundermental concepts of Python curses library. At the end of the lesson, we will build the following games/programs: <ul><li>Greeting message at the center of the screen.</li> <li>Keyboard decoding program.</li> <li>Curses color palette.</li> <li>The colorfull letter stars screensaver program.</li></ul>"
+        },
+        {
             "title": "Curses coordinate system",
-            "content": ""
+            "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). ",
+            "image": "curses-coordinate.png",
+            "slides": [
+                {
+                    "image": "index.jpg",
+                    "caption": ""
+                }
+            ]
         },
         {
             "title": "Hello Curses and basic functions",
