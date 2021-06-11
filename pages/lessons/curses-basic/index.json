@@ -11,7 +11,7 @@
         },
         {
             "title": "Curses coordinate system",
-            "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). ",
+            "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). (0, 0) will be the top left corner of the terminal. Y axis will go bigger from top to bottom, X axis will go bigger from left to right. Text characters (ASCII or unicode) will be used to paint.",
             "image": "curses-coordinate.png",
             "slides": [
                 {

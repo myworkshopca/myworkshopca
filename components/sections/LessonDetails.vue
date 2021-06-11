@@ -37,11 +37,12 @@ store-base-section(
         v-if="section.content"
         v-html="section.content"
       )
+      // position="left"
       v-img(
         v-if="section.image"
         :src="require(`@/pages/lessons/${$route.query.name}/${section.image}`)"
-        width="300px"
-        position="left"
+        width="500px"
+        position="center"
       )
       // using the slide-groups to show each image in a card.
          v-slide-group
