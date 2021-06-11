@@ -30,6 +30,9 @@
     "nuxt": "^2.15.6",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.0.0",
-    "vue-prism-component": "^2.0.0"
+    "vue-prism-component": "^1.2.0"
+  },
+  "devDependencies": {
+    "prismjs": "^1.23.0"
   }
 }
