@@ -44,6 +44,9 @@ store-base-section(
         width="500px"
         position="center"
       )
+      prism(
+        language="python"
+      ) {{ code }}
       // using the slide-groups to show each image in a card.
          v-slide-group
            v-slide-item
@@ -57,12 +60,19 @@ store-base-section(
 </template>
 
 <script>
+import 'prismjs';
+import 'prismjs/themes/prism.css';
+import 'prismjs/components/prism-python';
+
+import Prism from 'vue-prism-component';
+
 export default {
 
     name: "SectionLessonDetails",
 
     components: {
-        LessonToc: () => import('@/components/lesson/LessonToc'),
+        'LessonToc': () => import('@/components/lesson/LessonToc'),
+        'Prism': Prism
     },
 
 
@@ -70,11 +80,14 @@ export default {
 
         return {
 
+            // dummy data for testing.
+            code: 'import curses',
+
             details: null,
 
             // the model for list-item-group, it will store the index id
             // for the selected item
-            selectedSection: -1 
+            selectedSection: -1
         };
     },
 
