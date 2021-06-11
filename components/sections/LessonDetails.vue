@@ -45,8 +45,9 @@ store-base-section(
         position="center"
       )
       prism(
+        v-if="section.example"
         language="python"
-      ) {{ code }}
+      ) {{ code(`${section.example}`) }}
       // using the slide-groups to show each image in a card.
          v-slide-group
            v-slide-item
@@ -81,7 +82,7 @@ export default {
         return {
 
             // dummy data for testing.
-            code: 'import curses',
+            //code: 'import curses',
 
             details: null,
 
@@ -141,6 +142,13 @@ export default {
             } else {
                 vm.$vuetify.goTo(`#item${n}`);
             }
+        },
+
+        code: function(filename) {
+
+            const content = require(`@/pages/lessons/${this.$route.query.name}/${filename}`);
+            //console.dir(content.default);
+            return content.default;
         }
     }
 }

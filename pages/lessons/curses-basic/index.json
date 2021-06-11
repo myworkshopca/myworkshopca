@@ -11,7 +11,8 @@
         },
         {
             "title": "Hello World and curses basic functions",
-            "content": "We will start with a simple curses program: hello world. It will demonstrate the basic code structure of a curses program: <ul><li>Import curses module.</li> <li>Define the window function with stdscr parameter.</li> <li>Invoke <code>curses.wrapper</code> function to wrap up the window function.</li></ul>"
+            "content": "We will start with a simple curses program: hello world. It will demonstrate the basic code structure of a curses program: <ul><li>Import curses module.</li> <li>Define the window function with stdscr parameter.</li> <li>Invoke <code>curses.wrapper</code> function to wrap up the window function.</li></ul>",
+            "example": "hello.py"
         },
         {
             "title": "Curses coordinate system",
