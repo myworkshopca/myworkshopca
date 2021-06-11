@@ -33,6 +33,7 @@
     "vue-prism-component": "^1.2.0"
   },
   "devDependencies": {
-    "prismjs": "^1.23.0"
+    "prismjs": "^1.23.0",
+    "raw-loader": "^4.0.2"
   }
 }

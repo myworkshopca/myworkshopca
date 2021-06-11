@@ -19,6 +19,22 @@ export default {
         host: '0.0.0.0' // default is localhost
     },
 
+    build: {
+
+        /**
+         * configure raw-loader to load text file from file system.
+         */
+        extend( config, ctx ) {
+
+            config.module.rules.push( {
+                enforce: 'pre',
+                test: /\.py$/,
+                loader: 'raw-loader',
+                exclude: /(node_modules)/
+            } );
+        }
+    },
+
     buildModules: [
         // load the nuxtjs vutify-module
         // https://github.com/nuxt-community/vuetify-module
