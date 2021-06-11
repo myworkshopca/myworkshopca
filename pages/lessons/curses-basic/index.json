@@ -7,23 +7,44 @@
     "sections": [
         {
             "title": "Overview",
-            "content": "In this lesson, we will learn the fundermental concepts of Python curses library. At the end of the lesson, we will build the following games/programs: <ul><li>Greeting message at the center of the screen.</li> <li>Keyboard decoding program.</li> <li>Curses color palette.</li> <li>The colorfull letter stars screensaver program.</li></ul>"
+            "paragraphs": [
+                {
+                    "content": "In this lesson, we will learn the fundermental concepts of Python curses library. At the end of the lesson, we will build the following games/programs: <ul><li>Greeting message at the center of the screen.</li> <li>Keyboard decoding program.</li> <li>Curses color palette.</li> <li>The colorfull letter stars screensaver program.</li></ul>"
+                }
+            ]
         },
         {
             "title": "Hello World and curses basic functions",
-            "content": "We will start with a simple curses program: hello world. It will demonstrate the basic code structure of a curses program: <ul><li>Import curses module.</li> <li>Define the window function with stdscr parameter.</li> <li>Invoke <code>curses.wrapper</code> function to wrap up the window function.</li></ul>",
-            "example": "hello.py"
+            "paragraphs": [
+                {
+                    "content": "We will start with a simple curses program: hello world. It will demonstrate the basic code structure of a curses program: <ul><li>Import curses module.</li> <li>Define the window function with stdscr parameter.</li> <li>Invoke <code>curses.wrapper</code> function to wrap up the window function.</li></ul> The following code except shows the basic structure of a curses program:",
+                    "example": "hello.py"
+                },
+                {
+                    "content": "Here are a list of functions from curses library: <ul><li>stdscr.getmaxyx(): return the size of the terminal screen</li> <li>stdscr.addstr(str) and stdscr.addstr(y, x, str)</li> <li>stdscr.getch()</li></ul>"
+                }
+            ]
         },
         {
             "title": "Curses coordinate system",
-            "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). (0, 0) will be the top left corner of the terminal. Y axis will go bigger from top to bottom, X axis will go bigger from left to right. Text characters (ASCII or unicode) will be used to paint.",
-            "image": "curses-coordinate.png",
-            "slides": [
+            "paragraphs": [
                 {
-                    "image": "index.jpg",
-                    "caption": ""
+                    "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). (0, 0) will be the top left corner of the terminal. Y axis will go bigger from top to bottom, X axis will go bigger from left to right. Text characters (ASCII or unicode) will be used to paint.",
+                    "image": "curses-coordinate.png",
+                    "slides": [
+                        {
+                            "image": "index.jpg",
+                            "caption": ""
+                        }
+                    ]
                 }
             ]
+        }
+    ],
+
+    "sections-draft": [
+        {
+            "title": "Summary"
         },
         {
             "title": "Paint message at the center"
@@ -36,12 +57,6 @@
         },
         {
             "title": "How to use color with curses?"
-        }
-    ],
-
-    "sections-draft": [
-        {
-            "title": "Summary"
         }
     ]
 }

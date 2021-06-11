@@ -32,32 +32,30 @@ store-base-section(
       :id="`item${i}`"
     ).pb-6
       h3 {{ section.title }}
-      // v-html will override all content inside this element.
+      // TODO: We can NOT use p tag with v-for here!
+      // not sure why!
       div(
-        v-if="section.content"
-        v-html="section.content"
+        v-if="section.paragraphs"
+        v-for="(pg, index) in section.paragraphs"
+        :key="`${i}-${index}`"
       )
-      // position="left"
-      v-img(
-        v-if="section.image"
-        :src="require(`@/pages/lessons/${$route.query.name}/${section.image}`)"
-        width="500px"
-        position="center"
-      )
-      prism(
-        v-if="section.example"
-        language="python"
-      ) {{ code(`${section.example}`) }}
-      // using the slide-groups to show each image in a card.
-         v-slide-group
-           v-slide-item
-             v-card
+        // v-html will override all content inside this element.
+        div(
+          v-if="pg.content"
+          v-html="pg.content"
+        )
+        // position="left"
+        v-img(
+          v-if="pg.image"
+          :src="require(`@/pages/lessons/${$route.query.name}/${pg.image}`)"
+          width="500px"
+          position="center"
+        )
+        prism(
+          v-if="pg.example"
+          language="python"
+        ) {{ code(`${pg.example}`) }}
 
-      // some testing code to check the $route object
-      // br
-      //| {{ $route.path }}
-      //br
-      //| {{ $route.query}}
 </template>
 
 <script>
