@@ -14,4 +14,3 @@ banana, apple, orange = fruit
 
 print(banana)
 # banana
-

@@ -50,6 +50,15 @@
             ]
         },
         {
+            "title": "Paint message at the center of the screen",
+            "paragraphs": [
+                {
+                    "content": "Here are the code excpet to paint message at the center:",
+                    "example": "center.py"
+                }
+            ]
+        },
+        {
             "title": "Resources",
             "paragraphs": [
                 {
