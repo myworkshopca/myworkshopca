@@ -4,7 +4,7 @@
       "category": "Design",
       "title": "Curses in Basic",
       "router": "/lessons/details?name=curses-basic",
-      "html": "Basic knowledge about Python3 curses module."
+      "html": "Basic knowledge about Python3 curses library, coordinate system, using color, and auto playing."
     },
     {
       "img": "curses-snake/index.gif",
