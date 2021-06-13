@@ -38,7 +38,7 @@
             "title": "Curses coordinate system",
             "paragraphs": [
                 {
-                    "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). (0, 0) will be the top left corner of the terminal. Y axis will go bigger from top to bottom, X axis will go bigger from left to right. Text characters (ASCII or unicode) will be used to paint.",
+                    "content": "Python curses library will turn the text-based terminal into a painting board. The rectangular coordinate system (y-axis, x-axis) is used to locate each unit / cell on the painting board (terminal). (0, 0) will be the top left corner of the terminal. Y axis will go bigger from top to bottom, X axis will go bigger from left to right. Text characters (ASCII or unicode) will be used to paint.<br/>The following image shows the location of the coordinates <code>(0, 5)</code>:",
                     "image": "curses-coordinate.png",
                     "slides": [
                         {
@@ -53,8 +53,23 @@
             "title": "Paint message at the center of the screen",
             "paragraphs": [
                 {
+                    "content": "Using the coordinate system, we could paint message anywhere on the terminal screen. For example, we could paint a welcome message at the center of screen by following the steps:<ul><li>Call function <code>stdscr.getmaxyx()</code> to get the screen size, it will return a tuple.</li> <li>Calculate the starting coordinates, using the screen size and message length.</li> <li>Call function <code>stdscr.addstr(y, x, str)</code> to paint the message</li>"
+                },
+                {
                     "content": "Here are the code excpet to paint message at the center:",
                     "example": "center.py"
+                }
+            ]
+        },
+        {
+            "title": "How to use color with curses",
+            "paragraphs": [
+                {
+                    "content": "Curses library provides simple funtions to use colors in any curses program. However, we need initialize the color set before using them. The color set is a set of color pairs, foreground color and background color. An id will be assigned to each color pair. The id will be used to access a color pair."
+                },
+                {
+                    "content": "Here are the code excpet to initialize color pairs and use them:",
+                    "example": "color.py"
                 }
             ]
         },
