@@ -21,7 +21,16 @@
                     "example": "hello.py"
                 },
                 {
-                    "content": "Here are a list of functions from curses library: <ul><li>stdscr.getmaxyx(): return the size of the terminal screen</li> <li>stdscr.addstr(str) and stdscr.addstr(y, x, str)</li> <li>stdscr.getch()</li></ul>"
+                    "content": "Here are a list of functions from curses library: <ul><li>stdscr.getmaxyx(): return the size of the terminal screen, the height and width in <code>tuple</code> type.</li> <li>stdscr.addstr(str): paint the given string from the current cursor's coordinates.</li> <li>stdscr.addstr(y, x, str): paint the given string from the given coordinates.</li> <li>stdscr.getch()</li></ul>"
+                }
+            ]
+        },
+        {
+            "title": "Introduce the tuple type",
+            "paragraphs": [
+                {
+                    "content": "Tuples are used to store multiple items in a single variable.<ul><li>A tuple is a collection which is ordered and unchangeable</li> <li>Tuples are written with round brackets</li></ul>",
+                    "example": "tuple-sample.py"
                 }
             ]
         },
@@ -37,6 +46,14 @@
                             "caption": ""
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "title": "Resources",
+            "paragraphs": [
+                {
+                    "content": "List of references: <ul><li>API reference page for curses library: <a href='https://docs.python.org/3/library/curses.html'>https://docs.python.org/3/library/curses.html</a></li></ul>"
                 }
             ]
         }
