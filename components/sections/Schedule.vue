@@ -12,7 +12,7 @@
         tile
         height="50"
         class="d-flex"
-      )
+      ).mb-4
         v-toolbar(
           flat
         )
@@ -21,6 +21,7 @@
             color="success darken-2"
             @click="setToday"
           ) Today
+
           v-btn(
             icon
             @click="$refs.calendar.prev()"
@@ -39,9 +40,16 @@
           )
             v-icon mdi-chevron-right
 
+          v-spacer
+
+          v-btn(
+            color="primary darken-2"
+          ) Book Appointment
+
       v-sheet(
         height="600"
       )
+        // the ref will the id in $refs object.
         v-calendar(
           ref="calendar"
           v-model="value"
@@ -89,6 +97,7 @@ export default {
 
         /**
          * this method will hook on the @change event.
+         * The change event will have start and end datetime as the parameters
          */
         getEvents( {start, end} ) {
 
@@ -165,7 +174,6 @@ export default {
             }
 
             this.events = events;
-
         },
 
         /**
