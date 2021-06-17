@@ -34,6 +34,7 @@
       v-if="$slots.default || text"
       class="mx-auto"
       max-width="700"
+      space="2"
     )
       slot( v-if="$slots.default" )
 

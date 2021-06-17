@@ -4,6 +4,7 @@ store-base-section(
 )
   store-base-section-heading(
     title="Lessons"
+    space="2"
   ) 
     | A list of lessons that we are offeringg now.
 

@@ -8,6 +8,7 @@ store-base-section(
   store-base-section-heading(
     :title="title"
     id="top"
+    space="5"
   ) {{ details.subtitle }}
 
   lesson-toc(

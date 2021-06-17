@@ -109,7 +109,8 @@ export default {
       items: [
         { name: 'Home', router: '/' },
         { name: 'Lessons', router: '/lessons' },
-        { name: 'Resources', router: '/resources' },
+        // hide resources for now, we only need lessons.
+        //{ name: 'Resources', router: '/resources' },
         { name: 'Schedule', router: '/schedule' },
         //{ name: 'Lessons', router: '/menu' },
         //{ name: 'How to', router: '/setup' },

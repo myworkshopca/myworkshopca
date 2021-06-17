@@ -4,7 +4,8 @@
   )
     store-base-section-heading(
       title="MyWorkshop Schedule"
-    ) 
+      space="2"
+    ).mb-2
       | Current schedule for lessons and debug sessions.
 
     v-container
