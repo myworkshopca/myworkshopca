@@ -47,10 +47,18 @@
             color="primary darken-2"
           ) Book Appointment
 
+      // the calendar sheet.
       v-sheet(
         height="600"
       )
         // the ref will the id in $refs object.
+        // - weekdays will set which day to start for a week.
+        // - events is the model to store all events in current calendar view,
+        //   for example a week, a month, or a day.
+        // - change event will trigger the event reloading
+        //   when the calendar view changes.
+        //   It provides the opportunity to load events to events model for
+        //   the new calendar view.
         v-calendar(
           ref="calendar"
           v-model="value"
@@ -109,7 +117,8 @@ export default {
             // we set to start from Friday
             let theDay = new Date(`${start.date}T00:00:00`);
             //console.log("The Day: ", theDay);
-            // we have lesson on Friday.
+            // the ymd will be the ISO format YYYY-MM-DD,
+            // we will use it to construct the event start and end time.
             let ymd = theDay.toISOString().split("T")[0];
             // iterate through all week days: 
             // 0 is Sunday, 1 is Monday and 6 is Saturday
