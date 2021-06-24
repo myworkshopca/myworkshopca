@@ -21,7 +21,7 @@
                     "example": "hello.py"
                 },
                 {
-                    "content": "Here are a list of functions from curses library: <ul><li>stdscr.getmaxyx(): return the size of the terminal screen, the height and width in <code>tuple</code> type.</li> <li>stdscr.addstr(str): paint the given string from the current cursor's coordinates.</li> <li>stdscr.addstr(y, x, str): paint the given string from the given coordinates.</li> <li>stdscr.getch()</li></ul>"
+                    "content": "Here are a list of functions from curses library: <ul><li><code>stdscr.getmaxyx()</code>: return the size of the terminal screen, the height and width in <code>tuple</code> type.</li> <li><code>stdscr.addstr(str)</code>: paint the given string from the current cursor's coordinates.</li> <li><code>stdscr.addstr(y, x, str)</code>: paint the given string from the given coordinates.</li> <li><code>stdscr.getch()</code>: will put the program on pause and then wait for user to hit a key on keyboard. It returns an integer between 0 and 255, which represents the ASCII code of the key pressed.</li></ul>"
                 }
             ]
         },
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "title": "Timeout and no delay mode",
+            "title": "Curses timeout and no-delay mode",
             "paragraphs": [
                 {
                     "content": "timeout and no delay mode"
