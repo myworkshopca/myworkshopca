@@ -9,7 +9,13 @@
             "title": "Overview",
             "paragraphs": [
                 {
-                    "content": "In this lesson, we will learn the fundermental concepts of Python curses library. At the end of the lesson, we will build the following games/programs: <ul><li>Greeting message at the center of the screen.</li> <li>Keyboard decoding program.</li> <li>Curses color palette.</li> <li>The colorfull letter stars screensaver program.</li></ul>"
+                    "content": "In this lesson, we will learn the fundermental concepts of Python curses library. At the end of the lesson, we will build the following games/programs:",
+                    "content-list": [
+                        "Greeting message at the center of the screen.",
+                        "Keyboard decoding program.",
+                        "Curses color palette.",
+                        "The colorfull letter stars screensaver program."
+                    ]
                 }
             ]
         },

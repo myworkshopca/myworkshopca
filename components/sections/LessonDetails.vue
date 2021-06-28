@@ -45,6 +45,16 @@ store-base-section(
           v-if="pg.content"
           v-html="pg.content"
         )
+        // point list for content.
+        div(
+          v-if="pg.content_list"
+        )
+          ul
+           li(
+             v-for="(li, l) in pg.content_list"
+             :key="`${i}-${index}-${l}`"
+             v-html="li"
+           )
         // position="left"
         v-img(
           v-if="pg.image"
