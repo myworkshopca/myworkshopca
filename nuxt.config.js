@@ -23,6 +23,9 @@ export default {
 
         /**
          * configure raw-loader to load text file from file system.
+         * TODO: raw-loader will be deprecated in Webpack version 5 (released on Oct, 2020).
+         * It will be replaced by asset module:
+         * - https://webpack.js.org/guides/asset-modules/
          */
         extend( config, ctx ) {
 
