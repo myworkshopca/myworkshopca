@@ -1,0 +1,3 @@
+# Curses Tetris Game
+
+Build the classical Tetris Game by using the Python Curses module

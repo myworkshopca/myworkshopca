@@ -31,7 +31,7 @@ export default {
 
             config.module.rules.push( {
                 enforce: 'pre',
-                test: /\.py$/,
+                test: /\.(py|md)$/i,
                 loader: 'raw-loader',
                 exclude: /(node_modules)/
             } );
