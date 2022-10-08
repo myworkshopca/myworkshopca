@@ -11,7 +11,7 @@ v-footer(
         class="text-center"
         cols="12"
       )
-        | Copyright &copy; 2021 MyWorkshop.ca
+        | Copyright &copy; 2022 MyWorkshop.ca
         a(
           href="https://twitter.com/myworkshopca"
         ).pl-2
