@@ -31,4 +31,16 @@
     },
   }
 </script>
+<style>
+h1 {
+  background: red;
+}
+code {
+  display: block;
+}
+table {
+  width: 100%;
+  border: 1px solid red;
+}
+</style>
 
