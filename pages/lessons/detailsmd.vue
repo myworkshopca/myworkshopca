@@ -33,7 +33,9 @@
 </script>
 <style>
 h1 {
-  background: red;
+  /*background: red;*/
+  font-size: 2em;
+  text-align: center;
 }
 code {
   display: block;
@@ -43,4 +45,3 @@ table {
   border: 1px solid red;
 }
 </style>
-
