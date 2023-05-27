@@ -19,3 +19,34 @@ ls -la ~/rd/sites
 
 ~/rd/platform/scripts/deploy-nuxt-static-site.sh ~/rd/platform/myworkshop ~/rd/sites/myworkshopca.github.com
 ```
+
+## lessons
+
+Quick memo for lessons on MyWorkshop.
+Each leason should have a dedicated git repository on GitHub under
+organization [MyWorkshopCA](https://github.com/myworkshopca).
+Here is just a quick memo for how wy get started for each leason.
+We should reference the corresponding git repo for more details.
+
+### DataScienceBasic
+
+**Sat 27 May 2023 08:59:29 EDT**
+Created the Git repo: [](https://github.com/myworkshopca/DataScienceBasic)
+
+Set up local working folder:
+```bash
+cd ~/rd/myworkshopca; ls -la
+cd ~/rd/myworkshopca; git clone git@github.com:myworkshopca/DataScienceBasic.git
+
+# set up git author
+cd ~/rd/myworkshopca/DataScienceBasic; git config --list
+cd ~/rd/myworkshopca/DataScienceBasic; git config user.name 'Sean Chen'
+cd ~/rd/myworkshopca/DataScienceBasic; git config user.email 'sean.chen@leocorn.com'
+
+cd ~/rd/myworkshopca/DataScienceBasic; git log
+```
+
+vim command to edit
+```vim
+vert new ~/rd/myworkshopca/DataScienceBasic/README.md
+```
