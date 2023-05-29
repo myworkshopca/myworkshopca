@@ -49,4 +49,5 @@ cd ~/rd/myworkshopca/DataScienceBasic; git log
 vim command to edit
 ```vim
 vert new ~/rd/myworkshopca/DataScienceBasic/README.md
+new ~/rd/myworkshopca/DataScienceBasic/README.md
 ```
