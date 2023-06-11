@@ -1,5 +1,21 @@
 # The store front for MyWorkshop.ca
 
+Day to day stories is stored in folder
+
+```bash
+# on my local MacBook pro
+cd ~/rd/platform/myworkshop; ls -la
+cd ~/rd/platform/myworkshop; mkdir -v stories
+
+# start the readme
+cd ~/rd/platform/myworkshop; touch stories/README.md
+```
+
+vim editor command
+```vim
+vert new ~/rd/platform/myworkshop/stories/README.md
+```
+
 ## How to start the dev server
 
 ```bash

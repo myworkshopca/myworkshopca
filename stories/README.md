@@ -22,3 +22,8 @@ Create a copy of the file *tej3/ISP/buttonv2.ino* to work on it
 cd ~/rd/tej3/ISP; ls -la
 cd ~/rd/tej3/ISP; cp -v buttonv2.ino buttonv2-sean.ino
 ```
+
+Working on it now.
+```vim
+vert new ~/rd/tej3/ISP/buttonv2-sean.ino
+```
