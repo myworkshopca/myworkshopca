@@ -9,6 +9,11 @@ cd ~/rd/myworkshopca/curses-tetriminos; python3 --version #--help
 cd ~/rd/myworkshopca/curses-tetriminos; python3 paint.py
 ```
 
+Here is sample tetriminos
+
+[][]    [][]  [][][][]   []           []      [][]   [][][]
+  [][]  [][]             [][][]   [][][]    [][]       []
+
 ## explore local folder
 
 ```bash
