@@ -18,6 +18,7 @@
     extends: StoreBaseView,
 
     mixins: [
+      // LoadSections will convert the name from - connected name to Capitalized name
       LoadSections([
         'lesson-details-markdown',
       ]),

@@ -17,7 +17,7 @@
       "img": "curses-tetris/index.gif",
       "category": "Design",
       "title": "Curses Tetris Game",
-      "router": "/lessons/details?name=curses-tetris",
+      "router": "/lessons/detailsmd?name=curses-tetris",
       "html": "Build the classical Tetris Game by using Python3 curses module."
     }
 ]
