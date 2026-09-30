@@ -1,0 +1,197 @@
+<template lang="pug">
+  store-base-section(
+    id="schedule"
+  )
+    store-base-section-heading(
+      title="MyWorkshop Schedule"
+      space="2"
+    ).mb-2
+      | Current schedule for lessons and debug sessions.
+
+    v-container
+      v-sheet(
+        tile
+        height="50"
+        class="d-flex"
+      ).mb-4
+        v-toolbar(
+          flat
+        )
+          // go to today.
+          v-btn(
+            color="success darken-2"
+            @click="setToday"
+          ) Today
+
+          v-btn(
+            icon
+            @click="$refs.calendar.prev()"
+            color="primary"
+          )
+            v-icon mdi-chevron-left
+
+          v-toolbar-title(
+            v-if="$refs.calendar"
+          ) {{ $refs.calendar.title }}
+
+          v-btn(
+            icon
+            @click="$refs.calendar.next()"
+            color="primary"
+          )
+            v-icon mdi-chevron-right
+
+          v-spacer
+
+          v-btn(
+            color="primary darken-2"
+          ) Book Appointment
+
+      // the calendar sheet.
+      v-sheet(
+        height="600"
+      )
+        // the ref will the id in $refs object.
+        // - weekdays will set which day to start for a week.
+        // - events is the model to store all events in current calendar view,
+        //   for example a week, a month, or a day.
+        // - change event will trigger the event reloading
+        //   when the calendar view changes.
+        //   It provides the opportunity to load events to events model for
+        //   the new calendar view.
+        v-calendar(
+          ref="calendar"
+          v-model="value"
+          type="week"
+          color="primary"
+          :weekdays="weekday"
+          first-time="10:00"
+          :events="events"
+          :event-color="getEventColor"
+          @change="getEvents"
+        )
+</template>
+
+<script>
+export default {
+
+    name: "SectionSchedule",
+
+    data: function() {
+        return {
+            //value: '1999-03-01',
+            value: '',
+            // set the weekday to start from Friday
+            weekday: [5,6,0,1,2,3,4],
+            events: [],
+        };
+    },
+
+    mounted() {
+
+        // set to today to force the title.
+        // check this issue: https://github.com/vuetifyjs/vuetify/issues/8940
+        //this.value = '';
+        this.$refs.calendar.checkChange();
+    },
+
+    methods: {
+
+        /**
+         * method for the button to go to today.
+         */
+        setToday() {
+            this.value= '';
+        },
+
+        /**
+         * this method will hook on the @change event.
+         * The change event will have start and end datetime as the parameters
+         */
+        getEvents( {start, end} ) {
+
+            const events = [];
+
+            //console.log("start: ", start.date);
+            //console.log("start: ", end.date);
+            // we set to start from Friday
+            let theDay = new Date(`${start.date}T00:00:00`);
+            //console.log("The Day: ", theDay);
+            // the ymd will be the ISO format YYYY-MM-DD,
+            // we will use it to construct the event start and end time.
+            let ymd = theDay.toISOString().split("T")[0];
+            // iterate through all week days: 
+            // 0 is Sunday, 1 is Monday and 6 is Saturday
+            for( let i = 0; i < 7; i ++) {
+
+                // default event name and color.
+                let name = "Help & Debug Session";
+                let color = "deep-purple";
+
+                // set Friday and and Saturday for lesson.
+                if([5, 6].includes(theDay.getDay())) {
+                    name = "Lesson: Snake Game";
+                    color = "warning";
+                }
+
+                // the default start time and end time for an event.
+                let st = "18:00:00";
+                let et = "20:00:00";
+                switch( theDay.getDay() ) {
+                    case 0:
+                        //st = "10:00:00";
+                        //et = "11:00:00";
+                        st = null;
+                        et = null;
+                        break;
+                    case 1:
+                        //st = "18:00:00";
+                        //et = "19:00:00";
+                        st = null;
+                        et = null;
+                        break;
+                    case 4:
+                        st = "18:00:00";
+                        et = "20:00:00";
+                        break;
+                    case 5:
+                        //st = "19:00:00";
+                        st = null;
+                        //et = "20:30:00";
+                        et = null;
+                        break;
+                    case 6:
+                        //st = "18:30:00";
+                        st = null;
+                        //et = "20:00:00";
+                        et = null;
+                        break;
+                    default:
+                        break;
+                }
+
+                events.push( {
+                    name: name,
+                    start: new Date(`${ymd}T${st}`),
+                    end: new Date(`${ymd}T${et}`),
+                    color: color,
+                    timed: true
+                } );
+
+                theDay.setDate( theDay.getDate() + 1 );
+                //console.log("The Day: ", theDay);
+                ymd = theDay.toISOString().split("T")[0];
+            }
+
+            this.events = events;
+        },
+
+        /**
+         */
+        getEventColor( event ) {
+
+            return event.color;
+        }
+    }
+}
+</script>

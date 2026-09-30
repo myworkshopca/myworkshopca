@@ -1,0 +1,30 @@
+{
+    "title": "Curses Snake Game",
+    "subtitle": "Build the simple Snake Game by using the Python Curses module",
+    "overview": "The Curses Snake Game will demonstrate the basic Python3 programming concepts and basic Python modules. Students will build the simple Snake game to understand basic data types, core data structures, while/for loop, if/else statement, and functions.",
+
+    "comment-sections": "list of sections",
+    "sections": [
+        {
+            "title": "Objective"
+        },
+        {
+            "title": "Curses in basic",
+            "overview": "",
+            "subsections": [
+            ]
+        },
+        {
+            "title": "Paint message at the center"
+        },
+        {
+            "title": "ASCII code and unicode characters"
+        },
+        {
+            "title": "Challenge 1: Keyboard decoding"
+        },
+        {
+            "title": "How to use color with curses?"
+        }
+    ]
+}

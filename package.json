@@ -1,0 +1,40 @@
+{
+  "name": "myworkshop",
+  "version": "1.0.0",
+  "description": "for site myworkshop.ca",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leocornus/leocornus-platform/myworkshop"
+  },
+  "keywords": [
+    "nuxt",
+    "spa",
+    "vue"
+  ],
+  "author": "Sean Chen <sean.chen@leocorn.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "lodash": "^4.17.21",
+    "markdown-it": "^13.0.1",
+    "nanoid": "^2.1.11",
+    "npm": "^8.19.2",
+    "nuxt": "^2.12.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "vue-prism-component": "^1.2.0"
+  },
+  "devDependencies": {
+    "prismjs": "^1.23.0",
+    "raw-loader": "^4.0.2"
+  }
+}

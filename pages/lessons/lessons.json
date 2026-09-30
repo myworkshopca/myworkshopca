@@ -1,0 +1,23 @@
+[
+    {
+      "img": "curses-basic/index.gif",
+      "category": "Design",
+      "title": "Curses in Basic",
+      "router": "/lessons/details?name=curses-basic",
+      "html": "Basic knowledge about Python3 curses library, coordinate system, using color, and auto playing."
+    },
+    {
+      "img": "curses-snake/index.gif",
+      "category": "Design",
+      "title": "Curses Snake Game",
+      "router": "/lessons/details?name=curses-snake",
+      "html": "Build the Snake Game by using Python3 curses module."
+    },
+    {
+      "img": "curses-tetris/index.gif",
+      "category": "Design",
+      "title": "Curses Tetris Game",
+      "router": "/lessons/detailsmd?name=curses-tetris",
+      "html": "Build the classical Tetris Game by using Python3 curses module."
+    }
+]
