@@ -26,18 +26,21 @@ nvm use 16
 
 ## How to deploy to GitHub pages
 
-Use the `deploy-nuxt-static-site.sh` script to generate the static site and copy it into the
-GitHub Pages repository.
+Use `scripts/deploy-nuxt-static-site.sh` to generate the static site and copy it into the GitHub
+Pages repository. It takes the project folder and the target folder as arguments.
 
 ```bash
-# check the online doc
-cd ~/rd/platform/scripts; ./deploy-nuxt-static-site.sh
+# check the usage
+cd ~/rd/myworkshopca; ./scripts/deploy-nuxt-static-site.sh
 
 # check the target folder content
 ls -la ~/rd/sites/myworkshopca.github.com
 
-~/rd/platform/scripts/deploy-nuxt-static-site.sh ~/rd/myworkshopca ~/rd/sites/myworkshopca.github.com
+~/rd/myworkshopca/scripts/deploy-nuxt-static-site.sh ~/rd/myworkshopca ~/rd/sites/myworkshopca.github.com
 ```
+
+This script is a copy of the shared one in `leocornus-platform/scripts/`, taken at the time of the
+split so this repository stands alone.
 
 The `CNAME` file in the target folder points the site at https://myworkshop.ca.
 
