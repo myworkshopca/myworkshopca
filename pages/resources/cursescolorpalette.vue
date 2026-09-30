@@ -39,7 +39,7 @@ import StoreBaseView from '@/components/views/BaseView'
     name: 'cursesColorpalette',
     auth: false,
 
-    metaInfo: { title: 'Setup instruction for VLC media play on computer' },
+    metaInfo: { title: 'Curses colour palette' },
 
     extends: StoreBaseView,
 

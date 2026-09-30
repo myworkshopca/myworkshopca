@@ -40,7 +40,7 @@ import StoreBaseView from '@/components/views/BaseView'
     name: 'cursesCoordinate',
     auth: false,
 
-    metaInfo: { title: 'Setup instruction for VLC media play on computer' },
+    metaInfo: { title: 'Curses coordinate system' },
 
     extends: StoreBaseView,
 

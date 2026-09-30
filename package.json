@@ -21,8 +21,6 @@
   "author": "Sean Chen <sean.chen@leocorn.com>",
   "license": "ISC",
   "dependencies": {
-    "@nuxtjs/auth": "^4.9.1",
-    "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/vuetify": "^1.11.2",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",

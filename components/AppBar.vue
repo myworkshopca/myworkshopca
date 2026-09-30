@@ -40,46 +40,6 @@ div
           min-width="96"
           text
         ) {{ item.name }}
-        // the Sing in
-        //v-tab(
-          v-if="!$auth.loggedIn" 
-          :ripple="false"
-          active-class="text--primary"
-          class="font-weight-bold"
-          min-width="96"
-          text
-          @click="login"
-        //) Sign In
-        //v-menu(
-          v-if="$auth.loggedIn"
-          left bottom offset-y transition="scale-transition"
-        //)
-          template( v-slot:activator="{ on }" )
-            v-tab(
-              v-if="$auth.loggedIn" 
-              v-on="on"
-              class="font-weight-bold"
-            )
-              v-avatar(
-                  size="32"
-              )
-                img(:src="$auth.user.picture")
-              v-icon mdi-menu-down
-          v-card
-            v-list
-              v-list-item
-                v-list-item-avatar
-                  img( :src="$auth.user.picture" )
-                v-list-item-content
-                  v-list-item-title {{$auth.user.name}}
-                  v-list-item-subtitle {{$auth.user.email}}
-              v-list-item( @click="logout" )
-                v-list-item-icon
-                  v-icon mdi-logout
-                v-list-item-content
-                  v-list-item-title Logout
-
-            v-divider
 
     // hide when the screen is md and up
     v-app-bar-nav-icon(
@@ -112,29 +72,7 @@ export default {
         // hide resources for now, we only need lessons.
         //{ name: 'Resources', router: '/resources' },
         { name: 'Schedule', router: '/schedule' },
-        //{ name: 'Lessons', router: '/menu' },
-        //{ name: 'How to', router: '/setup' },
-        //{ name: 'Pricing', router: '/pricing' },
-        //'About',
-        //'Contact',
-        //'Pro',
       ],
     }),
-
-    methods: {
-
-        login: function() {
-
-            return this.$auth.loginWith('auth0')
-                .catch(error => {
-                    console.log(error);
-                });
-        },
-
-        logout: function() {
-
-            return this.$auth.logout();
-        }
-    }
 }
 </script>
